@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="assets/style.css" />
+    <title>Food</title>
+</head>
+<body>
+    <div type="container" id="container1">
+        <button id="backButton" class="button" onClick="history.back()">Go Back</button>
+        <header id="food-header"><img id="city" img src="assets/images/cityicon.jpg" alt="city">Chow Down in Town</header>
+            <hr id="line">
+            <div id="random-food">
+                <h3>Choose for me!</h3>
+                <hr id="line2">
+                <img id='dice' img src="assets/images/foodDice.jpg" alt="dice">
+                <br>
+                <button id='randomize-food' class="button" onclick="" >Generate a Place to Eat</button>
+            </div>
+            <div id="food-info">
+                <h3 id="food-info-header">Discover local restaurants, quick eats, and cafes at the click of a button!</h3>
+                 <p id="food-info-text">Looking for somewhere to eat can be a daunting task while you're away from home. Let us do the work for you. Scroll down to find local eateries, familiar favorites, and maybe even your new favorite restaurant. Or if you're feeling really indecisive, let the fates decide by clicking the button under the dice icon. </p>
+            <footer id="info-footer"> Take a look at our top picks for you </footer>
+                </div>
+           
+        </div>
+        <div class="container" id="container2">
+           <img id='restaurant-icon' img src="assets/images/foodplace.jpeg" alt="restaurant"> 
+           <h2 id="vacaylocation"></h2>
+           <hr id="line2">
+           <br><br>
+        </div>
+
+    <div id="map"></div>
+
+    
+    
+</body>
+
+<script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZ36eZVdMS6iK9BoLKTraX103U9PmLCFk&callback=initMap&v=weekly"
+    defer
+  ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="assets/script.js"></script>
+    <script src="assets/script2.js"></script>
+</html>

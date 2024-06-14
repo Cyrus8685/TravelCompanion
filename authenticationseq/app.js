@@ -1,8 +1,10 @@
-const express = require("express");
-const sequelize = require("./db"); // Import Sequelize instance
-const User = require("./models/User")(sequelize);// Import User Model
+import express from ("express");
+import sequelize ("./db"); // Import Sequelize instance
+const User = require("./models/User.mjs")(sequelize);// Import User Model
 const bcrypt = require("bcrypt");
 const jwt = require('jsonwebtoken');
+
+import Web3 from 'web3';
 
 const app = express();
 
@@ -18,6 +20,7 @@ app.use(express.json());
 
 //User Registration
 app.post("/register", async (req, res) =>{
+
     try {
         const { username, email, password } = req.body;
         const hashedPassword = await bcrypt.hash(password, 10);

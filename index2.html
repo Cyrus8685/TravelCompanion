@@ -31,17 +31,19 @@
            <hr id="line2">
            <br><br>
         </div>
+            <div id="map"></div>
+            <div id="sidebar">
+              <h2>Results</h2>
+              <ul id="places"></ul>
+              <button id="more">Load more results</button>
+            </div>
+            <div id="map"></div>
 
-    <div id="map"></div>
-
-    
-    
 </body>
-
-<script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZ36eZVdMS6iK9BoLKTraX103U9PmLCFk&callback=initMap&v=weekly"
-    defer
-  ></script>
+  <script
+  src="https://maps.googleapis.com/maps/api/js?key=insertAPIkeyhere&callback=initMap&libraries=places&v=weekly"
+  defer
+></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="assets/script.js"></script>

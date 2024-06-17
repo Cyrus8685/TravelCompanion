@@ -1,7 +1,9 @@
 #map {
     height: 40%;
-    width: 40%;
-    
+    width: 40%; 
+    float: inline-start;
+    margin-left: 2%;
+    margin-right: 2%;
   }
   
   html,
@@ -83,7 +85,14 @@ margin-right: 5%;
     text-align: center;
     font-size: larger;
 }
-
 #container2 {
    padding:2%;
+}
+#sidebar {
+    background-color: rgb(228, 164, 96);
+    width: 50%;
+    display: flex;
+    float: inline-start;
+    margin-left: 2%;
+    margin-right: 2%;
 }

@@ -3,13 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>TravelCompanion</title>
+    <link rel="stylesheet" href="assets/style2.css">
 </head>
 <body>
-    <input id="autocomplete" placeholder="Enter a place" type="text"/>
-    <button id="submit" onclick="storeInput()"class="button">Submit</button>
+    <div class="container">
+        <header>
+            <h1>TravelCompanion</h1>
+            <p>Your guide to exploring new places</p>
+        </header>
+        <main>
+            <div class="search-box">
+                <input type="text" id="autocomplete" placeholder="Enter a location...">
+                <button type="button" id="submit" onclick="storeInput()">Search</button>
+            </div>
+            <div id="selection"></div>
+            <div id="details"></div>
+            <div class="categories">
+                <div class="category" id='foodButton' onclick="goToFoodPage()">
+                    <img src="assets/images/pic2.png" alt="Food">
+                    <p>Food Page</p>
+                </div>
+                <div class="category" onclick="goToHotelsPage()">
+                    <img src="assets/images/pic.png" alt="Hotels">
+                    <p>Hotels Page</p>
+                </div>
+            </div>
+            <div id="images" class="image-container"></div>
+            <div id="description" class="description-container">
+                <h2>Whether you're searching for the best bites or the coziest nights, TravelCompanion has got you covered. </h2>
+                    <h3>Why Choose TravelCompanion?</h3>
+                        <ls> - Personalized Exploration: Our advanced search and autocomplete features make it easy to find exactly what you're looking for.</ls>
+                        <br><br>
+                        <ls> - Visual Delight: Enjoy beautiful photos of places you want to visit, giving you a sneak peek into your next adventure.</ls>
+                        <br><br>
+                        <ls> - Seamless Experience: Navigate our user-friendly interface to plan your trip effortlessly and make informed decisions with confidence.</ls>
+                        <br><br>
+                    <h3>Start your next adventure with TravelCompanion the ultimate guide to discovering the world. Explore amazing destinations with confidence and ease, knowing you have the best recommendations at your fingertips!</h3>
+            </div>
+        </main>
+    </div>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=insertAPIkeyhere&libraries=places&callback=initAutocomplete" async defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCN3TP93F6l75a2qIh9ba7uUGbaLJ1zG3M&libraries=places&callback=initAutocomplete" async defer></script>
 <script src="assets/script.js"></script>
 </html>

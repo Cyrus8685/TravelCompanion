@@ -17,45 +17,39 @@ function initAutocomplete() {
             "Enter a Place";
         } else {
             document.getElementById('details').innerHTML = place.name;
+            const randomPhoto = place.photos[Math.floor(Math.random() * place.photos.length)];
+            const img = document.createElement('img');
+            img.src = randomPhoto.getUrl({ maxWidth: 300, maxHeight: 100 });
+            imagesElem.appendChild(img);
         }
-    }
- ;
+    };
+
 function storeInput() {
     var geocoder = new google.maps.Geocoder();
     var address= document.getElementById('autocomplete').value;
-
-
     const Cities = [];
     let currentCities = JSON.parse(localStorage.getItem('city'));
-    
     if (currentCities == null) {
          currentCities = [];
     };
-    
     const newCity= document.getElementById('autocomplete').value;
     if (newCity == "") {
       alert("Please enter a location");}
-    
-      else {
-    
+      else {  
     if (currentCities === null) {
       Cities.push(newCity);
       localStorage.setItem('City', JSON.stringify(Cities));
-    
     } else {
     currentCities.push(newCity);
     localStorage.setItem('City', JSON.stringify(currentCities));
     }
 }
     geocoder.geocode( { 'address': address}, function(results, status) {
-
-
       if (status == google.maps.GeocoderStatus.OK) {
         var latitude = results[0].geometry.location.lat();
         var longitude = results[0].geometry.location.lng();
         console.log(latitude);
         console.log(longitude);
-
             const lat = [];
             let lats = JSON.parse(localStorage.getItem('lats'));
             if (lats === null) {
@@ -93,16 +87,16 @@ function storeInput() {
             }
 
             if (newLat !== '' && newLong !=='') {
-                 window.location.assign('index4.html')
-                 
-            } else {
-                 alert("Please enter a valid address")
-            }
-        
+                 //window.location.assign('index4.html')//
+                 console.log("Coordinates are stored")
+                 document.getElementById("selection").innerHTML = "Please select a page to view hotel and food options in";
+            }  
        }
     } 
-)
-      
- 
-    
-};
+)};
+function goToFoodPage() {
+     window.location.assign('index2.html')      
+}
+function goToHotelsPage() {
+     window.location.assign('index2.html')
+}

@@ -95,5 +95,5 @@ function goToFoodPage() {
      window.location.assign('index2.html')      
 }
 function goToHotelsPage() {
-     window.location.assign('index2.html')
+     window.location.assign('index3.html')
 }

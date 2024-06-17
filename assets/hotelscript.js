@@ -95,8 +95,8 @@ function storeInput() {
     } 
 )};
 function goToFoodPage() {
-     window.location.assign('index2.html')      
+     window.location.assign('index.html')      
 }
 function goToHotelsPage() {
-     window.location.assign('index2.html')
+     window.location.assign('index.html')
 }

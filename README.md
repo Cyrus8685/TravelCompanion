@@ -16,3 +16,6 @@ In order to utilize the app the user must go through registration. Once register
 * Nate-Scuderi - Nathan Scuderi
 * ConnorLuks - Connor O'Halloran
 * Arosswhich - Abigail Ross-Whichello
+
+![Screenshot 2024-06-17 192327](https://github.com/Cyrus8685/TravelCompanion/assets/141157335/4ca45081-88b0-48fc-82ef-3e8e4060ad93)
+

@@ -63,10 +63,13 @@ body {
     width: 50%;
     margin-top: 2%;
     margin-bottom: 1%;
+    text-align: center;
 }
 
 #hotel-information-text {
     font-size: medium;
+    text-align: center;
+    margin-left: 0%;
 }
 
 /*#photo-of-hotel { 
@@ -93,18 +96,18 @@ body {
 }
 
 #container2 {
-    margin-top: 2%;
+    margin-top: 5%;
 }
 
 
 body {
     font-family: Arial, sans-serif;
-    background-color: whitesmoke;
-    color: grey;
-    display: flex;
+    background-color: rgb(228,164,96);
+    color: rgb(68, 63, 63);
+    display:flex;
     justify-content: center;
     align-items: center;
-    height: 130vh;
+    height: 170vh;
     margin: 0;
     padding: 0;
 }

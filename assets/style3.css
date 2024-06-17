@@ -1,0 +1,165 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#backButton {
+    float: inline-end;
+}
+
+.button {
+    background-color: rgb(238, 225, 45); 
+    color: black;
+    border-radius: 5px;
+    border-color: rgb(61, 60, 63);
+    padding: 5px;
+}
+
+.button:hover {
+    border-color: aquamarine;
+    letter-spacing: 0.07em;
+    box-shadow: 0 0 5px #0056b3;
+}
+
+#container1 { 
+    margin: 5%;
+    background-color: whitesmoke;
+    padding: 2%;
+}
+#hotelimage {
+    width: 550px;
+    margin-bottom: 15px;
+    margin-right: 10px;
+
+}
+#hotels-header {
+    font-weight: bold;
+    font-size: large;
+}
+
+#line {
+    width: 100%;
+    border: solid 1px rgb(247, 17, 17);
+    color: rgb(247, 17, 17);
+}
+
+#line2 {
+    width: 100%;
+    border: solid 1px rgb(61, 60, 63);
+    color:rgb(61, 60, 63);
+}
+
+#hotel-information {
+    width: 50%;
+    margin-top: 2%;
+    margin-bottom: 1%;
+    text-align: center;
+}
+
+#hotel-information-text {
+    font-size: medium;
+    text-align: center;
+    margin-left: 0%;
+}
+
+/*#photo-of-hotel { 
+    float: right;
+    background-color: whitesmoke;
+    padding:1%;
+    text-align: center;
+    border-radius: 20px;
+    margin-right: 5%; 
+}*/
+
+#magnify {
+    display: block;
+    width: 300px;
+    margin: auto;
+}
+
+
+#info-footer {
+    margin-top: 5%;
+    text-align: center;
+    font-size: medium;
+
+}
+
+#container2 {
+    margin-top: 5%;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(228,164,96);
+    color: rgb(68, 63, 63);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 170vh;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background: whitesmoke;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+ padding: 20px;
+} 
+
+h1 {
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid whitesmoke;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+button { /* Enter location search button */
+    padding: 10px 15px;
+    background: rgb(238, 225, 45);
+    color: rgb(22, 21, 21);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover { /* button hover color */
+    background: #6d7175;
+}
+
+.hotels {
+    margin-top: 20px;
+}
+
+
+#hotels-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#hotels-header img {
+    max-height: 50px;
+}
+
+#photo-of-hotel img {
+    max-width: 100%;
+    height: auto;
+}
+
+#hotel-information {
+    margin-top: 20px;
+}
+
+footer {
+    margin-top: 20px;
+}

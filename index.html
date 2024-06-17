@@ -3,53 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="foodstyle.css" />
-    <title>Food</title>
+    <title>TravelCompanion</title>
+    <link rel="stylesheet" href="assets/style2.css">
 </head>
 <body>
-<div type="container" id="container1">
-<button id="backButton" class="button" onClick="history.back()">Go Back</button>
-<header id="food-header"><img id="city" img src="foodImages/cityicon.jpg" alt="city">Chow Down in Town</header>
-    <hr id="line">
-    <div id="random-food">
-        <h3>Choose for me!</h3>
-        <hr id="line2">
-        <img id='dice' img src="foodImages/foodDice.jpg" alt="dice">
-        <br>
-        <button id='randomize-food' class="button" onclick="" >Generate a Place to Eat</button>
+    <div class="container">
+        <header>
+            <h1>TravelCompanion</h1>
+            <p>Your guide to exploring new places</p>
+        </header>
+        <main>
+            <div class="search-box">
+                <input type="text" id="autocomplete" placeholder="Enter a location...">
+                <button type="button" id="submit" onclick="storeInput()">Search</button>
+            </div>
+            <div id="selection"></div>
+            <div id="details"></div>
+            <div class="categories">
+                <div class="category" id='foodButton' onclick="goToFoodPage()">
+                    <img src="assets/images/pic2.png" alt="Food">
+                    <p>Food Page</p>
+                </div>
+                <div class="category" onclick="goToHotelsPage()">
+                    <img src="assets/images/pic.png" alt="Hotels">
+                    <p>Hotels Page</p>
+                </div>
+            </div>
+            <div id="images" class="image-container"></div>
+            <div id="description" class="description-container">
+                <h2>Whether you're searching for the best bites or the coziest nights, TravelCompanion has got you covered. </h2>
+                    <h3>Why Choose TravelCompanion?</h3>
+                        <ls> - Personalized Exploration: Our advanced search and autocomplete features make it easy to find exactly what you're looking for.</ls>
+                        <br><br>
+                        <ls> - Visual Delight: Enjoy beautiful photos of places you want to visit, giving you a sneak peek into your next adventure.</ls>
+                        <br><br>
+                        <ls> - Seamless Experience: Navigate our user-friendly interface to plan your trip effortlessly and make informed decisions with confidence.</ls>
+                        <br><br>
+                    <h3>Start your next adventure with TravelCompanion the ultimate guide to discovering the world. Explore amazing destinations with confidence and ease, knowing you have the best recommendations at your fingertips!</h3>
+            </div>
+        </main>
     </div>
-    <div id="food-info">
-        <h3 id="food-info-header">Discover local restaurants, quick eats, and cafes at the click of a button!</h3>
-         <p id="food-info-text">Looking for somewhere to eat can be a daunting task while you're away from home. Let us do the work for you. Scroll down to find local eateries, familiar favorites, and maybe even your new favorite restaurant. Or if you're feeling really indecisive, let the fates decide by clicking the button under the dice icon. </p>
-    <footer id="info-footer"> Take a look at our top picks for you </footer>
-        </div>
-   
-</div>
-<div class="container" id="container2">
-   <img id='restaurant-icon' img src="foodImages/foodplace.jpeg" alt="restaurant"> 
-   <h2 id="vacaylocation"></h2>
-   <br><br>
-    <div id="restaurant1" class="eateries">
-        <h1 id = 'restaurant1name' class="restaurantname"></h1>
-    </div>
-    <br><br>
-    <div id="restaurant2" class="eateries">
-        <h1 id = 'restaurant2name' class="restaurantname"></h1>
-    </div>
-    <br><br>
-    <div id="restaurant3" class="eateries">
-        <h1 id = 'restaurant3name' class="restaurantname"></h1>
-    </div>
-    <br><br>
-    <div id="restaurant4" class="eateries">
-        <h1 id = 'restaurant4name' class="restaurantname"></h1>
-    </div>
-</div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="foodjs.js"></script>
-    <script src="foodjs2.js"></script>
-
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCN3TP93F6l75a2qIh9ba7uUGbaLJ1zG3M&libraries=places&callback=initAutocomplete" async defer></script>
+<script src="assets/script.js"></script>
 </html>

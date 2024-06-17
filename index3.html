@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="assets/style3.css" />
+    <title>Food</title>
+</head>
+<body>
+    <div class="container" id="container1">
+        <button id="backButton" class="button" onClick="history.back()">Go Back</button>
+        <header id="hotels-header">
+           <!-- <img id="hotelimage" img src="/assets/images/Screenshot 2024-06-16 153820.png" alt="hotel image"> !-->
+            <h2>TravelCompanion Hotel Finder</h2>
+        </header>
+        <hr id="line">
+        <div id="photo-of-hotel">
+            <h3></h3>
+            <hr id="line2">
+            <br></br>
+          
+            <img id="magnify" img src="/assets/images/hotelsmainimage.jpg" alt="magnify">
+            <br></br>
+          <!--  <button id="hotel-location" class="button">Shows the hotel location</button> !!! alternate incase other does not work-->
+        </div>
+        <div id="hotel-information">
+            <h4 id="hotel-information-header">Welcome to TravelCompanion Hotel Finder, your one-stop destination for finding the best hotels around the world. 
+            <br></br>Whether you're planning a luxurious vacation, a business trip, or a weekend getaway, TravelCompanion Hotel Finder is here to help you find the perfect place to stay. 
+            <br></br>With our user-friendly interface, comprehensive hotel listings, and honest reviews, you'll have all the information you need to make an informed decision. </h4>
+            <p id="hotel-information-text">How To Use. <br></br>
+
+                1: Search - Enter your destination, dates, and preferences to find the best hotels that match your criteria.
+                <br></br>
+                2: Compare - Browse through the list of hotels, if you find a suitable hotel proceed to the next section, or you can revise or randomize your search.
+                <br></br>
+                3: Book - Once you find the perfect hotel, book your stay directly through our website for a hassle-free experience. (in progress)
+                <br></br>
+                4: Enjoy - Have a memorable stay at your chosen hotel! knowing you made the best choice with TravelCompanion Hotel Finder</p>
+            <footer id="info-footer"> * * *</footer> 
+        </div>
+    </div>     
+    <div class="container" id="container2">
+        <img id='hotels-logo' img src="/assets/images/hotelicon.jpg" alt="hotel icon">
+
+        <h2 id="hotelfoundlocation"></h2>
+        <hr id="line2">
+        <br></br>
+        
+        
+        <div id="foodResults">
+            <div id="sidebar">
+              <h2>Results</h2>
+              <br><br>
+              <ul id="places"></ul>
+        </div> 
+       
+</body>
+  <script
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCN3TP93F6l75a2qIh9ba7uUGbaLJ1zG3M&callback=initMap&libraries=places&v=weekly"
+  defer
+></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="assets/script.js"></script>
+    <script src="assets/script3.js"></script>
+</html>

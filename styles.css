@@ -14,7 +14,6 @@ body {
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
@@ -28,9 +27,6 @@ header p {
 
 .search-box {
     margin: 20px 0;
-
-
-
 }
 
 .search-box input {
@@ -48,7 +44,7 @@ header p {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
-    border: white
+    border: white;
 }
 
 .search-box button:hover {
@@ -63,16 +59,22 @@ header p {
 }
 
 .category {
-    width: 300px;
+    width: 200px; 
+    height: 200px; 
     text-align: center;
     cursor: pointer;
     transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .category img {
     width: 100%;
+    height: 70%; 
+    object-fit: cover;
     border-radius: 10px;
-  
 }
 
 .category p {
@@ -84,16 +86,28 @@ header p {
 .category:hover {
     transform: scale(1);
 }
+
 .image-container {
     margin-top: 20px;
     display: flex;
     justify-content: center;
     gap: 10px;
     flex-wrap: static;
+    max-height: 200px;
 }
 
 .image-container img {
     max-width: 100%;
     border-radius: 10px;
     max-height: 300px;
+}
+
+.description-container {
+    margin-top: 20px;
+    font-size: .8em;
+    color: #333;
+    padding: 10px;
+    background-color:#ffcc33; 
+    border-radius: 10px;
+    max-width: 500px;
 }

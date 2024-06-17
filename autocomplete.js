@@ -24,7 +24,7 @@ function onPlaceChanged() {
     if (place.photos && place.photos.length > 0) {
         const randomPhoto = place.photos[Math.floor(Math.random() * place.photos.length)];
         const img = document.createElement('img');
-        img.src = randomPhoto.getUrl({ maxWidth: 300, maxHeight: 300 });
+        img.src = randomPhoto.getUrl({ maxWidth: 300, maxHeight: 100 });
         imagesElem.appendChild(img);
     } else {
         const noImageText = document.createElement('p');

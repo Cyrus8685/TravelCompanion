@@ -54,6 +54,7 @@ function addPlaces(places, map) {
       placesList.appendChild(li);
       li.addEventListener("click", () => {
         map.setCenter(place.geometry.location);
+        console.log('li')
       });
     }
   }

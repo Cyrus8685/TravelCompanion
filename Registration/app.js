@@ -4,11 +4,15 @@ const User = require("./models/User.js")(sequelize);// Import User Model
 const bcrypt = require('bcrypt');
 var jwt = require('jsonwebtoken');
 var path = require('path');
-var bodyParser = require('body-parser');
+const bodyparser = require("body-parser");
+
 
 const app = express();
 
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.urlencoded({ extended: true }));
+app.use(bodyparser.urlencoded({ extended: false }));
+app.use(bodyparser.json());
 
 sequelize
     .sync()
@@ -18,11 +22,8 @@ sequelize
     })
     .catch(err => console.error("Error syncing database:", err));
 
-    app.use(express.json());
-    app.use(bodyParser.json());
-
 //User Registration
-app.post("/register", async (req, res) =>{
+app.post("/register", async function (req, res) {
     try {
         const { username, email, password } = req.body;
         const hashedPassword = await bcrypt.hash(password, 10);
@@ -47,7 +48,7 @@ app.post('/login', async (req, res) => {
             return res.status(400).json({ message: 'Invalid Credentials '});
         }
         const token = jwt.sign({ userId: user.id }, process.env.DB_SECRET, { expiresIn: '1h' });
-        res.json({ token });
+        res.redirect('/profile.html');
     } catch (error) {
         console.error('Error logging in:', error);
         res.status(500).json({ message: 'Server Error'});

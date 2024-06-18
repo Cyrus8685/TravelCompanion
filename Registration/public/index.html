@@ -52,13 +52,13 @@
 
                     <div class="input-box">
                         <span class="icon"><i class='bx bxs-envelope'></i></span>
-                        <input type="email" required>
+                        <input type="email" name="email" required>
                         <label>Email</label>
                     </div>
 
                     <div class="input-box">
                         <span class="icon"><i class='bx bxs-lock-alt'></i></span>
-                        <input type="password" required>
+                        <input type="password" name="password" required>
                         <label>Password</label>
                     </div>
 
@@ -76,33 +76,32 @@
             </div>
 
             <div class="form-box register">
-                <form action="/register" method="post">
+                <form action="#">
                     <h2>Sign Up</h2>
 
                     <div class="input-box">
                         <span class="icon"><i class='bx bxs-user'></i></span>
-                        <input type="text" required>
+                        <input type="text" name="username" required id="regUsername">
                         <label>Name</label>
                     </div>
 
                     <div class="input-box">
                         <span class="icon"><i class='bx bxs-envelope'></i></span>
-                        <input type="email" required>
+                        <input type="email" name="email" required id="regEmail">
                         <label>Email</label>
                     </div>
 
                     <div class="input-box">
                         <span class="icon"><i class='bx bxs-lock-alt'></i></span>
-                        <input type="password" required>
+                        <input type="password" name="password" required id="regPassword">
                         <label>Password</label>
                     </div>
 
                     <div class="remember-forgot">
                         <label><input type="checkbox"> I agree to the terms & conditions</label>
                     </div>
-
                     <button type="submit" class="btn" id="regButton">Sign Up</button>
-
+                <div class="alert alert" hidden>Succes</div>
                     <div class="login-register">
                         <p>Already have an account? <a href="#" class="login-link">Sign in</a></p>
                     </div>
@@ -110,10 +109,13 @@
             </div>
         </div>
     </div>
-
-
-    <script type="module" src="/script.mjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="sweetalert2.all.min.js"></script>
+    <script src="sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="sweetalert2.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/style.css">
+    <script type="module" src="/script.mjs"></script>
 </body>
 
 </html>

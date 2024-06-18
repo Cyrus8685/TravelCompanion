@@ -24,6 +24,11 @@ console.log(area)
     (results, status) => {
       if (status !== "OK" || !results) return
         addPlaces(results, map);
+        var randomFood = results[Math.floor(Math.random()*results.length)];
+        console.log(randomFood)
+        randomFoodPlace = randomFood.vicinity + randomFood.name
+        console.log(randomFoodPlace)
+        localStorage.setItem('random',randomFoodPlace)
     },
   );
 }
@@ -54,10 +59,23 @@ function addPlaces(places, map) {
       placesList.appendChild(li);
       li.addEventListener("click", () => {
         map.setCenter(place.geometry.location);
-        console.log('li')
+        
       });
     }
   }
 }
 
-window.initMap = initMap;
+function randomize() {
+  var random = localStorage.getItem('random')
+  console.log(random)
+  document.getElementById("randomPlace").innerHTML = random 
+}
+/* function randomize() {
+  let latitude = JSON.parse(localStorage.getItem('lats'));
+  let lat = latitude.map(Number)
+  let longitude = JSON.parse(localStorage.getItem('longs'));
+  let lng = longitude.map(Number)
+  var numLat = (parseFloat(lat))
+  var numLng = (parseFloat(lng))
+  const area = { lat: numLat, lng: numLng };
+} */

@@ -19,3 +19,6 @@ In order to utilize the app the user must go through registration. Once register
 
 ![Screenshot 2024-06-17 192327](https://github.com/Cyrus8685/TravelCompanion/assets/141157335/4ca45081-88b0-48fc-82ef-3e8e4060ad93)
 
+![Screenshot 2024-06-17 195723](https://github.com/Cyrus8685/TravelCompanion/assets/141157335/0db373f5-a14c-4aa0-96d8-f73ed4d9dd42)
+
+![Screenshot 2024-06-17 195959](https://github.com/Cyrus8685/TravelCompanion/assets/141157335/5cd4c96b-50e4-46c4-938d-a56aceb6d21f)

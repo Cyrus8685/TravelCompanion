@@ -34,7 +34,7 @@ io.on('connection', socket => {
 
   // create a listener using socket.on(eventName, callback)
   socket.on('example', data => {
-    const newData = `${data}, all connected clients should get this alert`;
+    const newData = `${data}, And Received!`;
     // io.emit triggers listeners for all connected clients
     io.emit('clientSocketName', newData);
   });})

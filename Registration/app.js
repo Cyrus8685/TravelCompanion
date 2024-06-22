@@ -4,21 +4,18 @@ const User = require("./models/User.js")(sequelize);// Import User Model
 const bcrypt = require('bcrypt');
 var jwt = require('jsonwebtoken');
 var path = require('path');
-const bodyparser = require("body-parser");
-
 
 const app = express();
-
+const http = require('http').Server(app);
+const io = require('socket.io')(http);
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({ extended: true }));
-app.use(bodyparser.urlencoded({ extended: false }));
-app.use(bodyparser.json());
 
 sequelize
     .sync()
     .then(() => {
         console.log("Database synced");
-        app.listen(4000, () => console.log ("Server Listening on Port 4000"));
+        http.listen(4000, () => console.log ("Server Listening on Port 4000"));
     })
     .catch(err => console.error("Error syncing database:", err));
 
@@ -26,9 +23,23 @@ sequelize
 app.post("/register", async function (req, res) {
     try {
         const { username, email, password } = req.body;
-        const hashedPassword = await bcrypt.hash(password, 10);
-        const user = await User.create({ username, email, password: hashedPassword });
-        res.status(201).json({ message: 'User registered successfully', user});
+        const hashedPassword = await bcrypt.hash(`${password}`, 10);
+        await User.create({ username, email, password: hashedPassword });
+io.on('connection', socket => {
+  // any code here will run upon the 'connection' event
+  console.log(`user: ${socket.id} connected`);
+
+  /* Add your listeners here! */
+  /* Add your listeners here! */
+
+  // create a listener using socket.on(eventName, callback)
+  socket.on('example', data => {
+    const newData = `${data}, all connected clients should get this alert`;
+    // io.emit triggers listeners for all connected clients
+    io.emit('clientSocketName', newData);
+  });})
+        console.log ('Registration Complete!');
+        res.status(204);
     } catch (error) {
         console.error('Error Registering User:', error);
         res.status(500).json({ message: 'Server Error' });
